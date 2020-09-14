@@ -2,7 +2,7 @@ function myMove() {
   var load_circle = document.createElement("DIV");
   load_circle.id = "loading-symbol";
   var container_elem = document.getElementById("container");
-  document.body.appendChild(load_circle); 
+  container_elem.appendChild(load_circle); 
   var elem = load_circle;
      
   var x_pos = 0;
@@ -22,7 +22,7 @@ function myMove() {
   var vel_multiplier = 0.125;
   
   function frame() {
-    if (stop_move == 0) {
+    if (stop_move == 2) {
       clearInterval(id);
       load_circle.remove();
       angle = 0;
